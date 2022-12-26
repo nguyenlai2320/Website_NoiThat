@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
+:root {
+    --background: #fff;
+    --color: #000;
+}
+body {
+    font-family: Fira sans;
+}
+.container {
+    width: 1519px;
+    height: 745px;
+}
+.left-pane {
+    width: 768px;
+    height: 745px;
+    float: left;
+    background-image: url("../img/bg-signin.jpg");
+    background-size: cover;
+}
+.right-pane {
+    width: 751px;
+    height: 745px;
+    float: left;
+    background: var(--background);
+    color: var(--color);
+    position: relative;
+}
+.title{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.signin-form{
+    width: 100%;
+    height: 680px;
+}
+.form-field{
+    margin-top: 50px;
+    margin-left: 20px;
+    position: relative;
+}
+.input-user{
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-user{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.input-user:not(:placeholder-shown) + .label-user, 
+.input-user:focus + .label-user {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+.input-pass{
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-pass{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+
+.input-pass:not(:placeholder-shown) + .label-pass, 
+.input-pass:focus + .label-pass {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+.option-signin {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.forgot-password{
+    text-decoration: none;
+    position: absolute;
+    right: 185px;
+    color: #000;
+}
+.signup{
+    text-decoration: none;
+    position: absolute;
+    right: 50px;
+    color: #000;
+}
+.return-homepage {
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+.return-homepage:hover, .signup:hover, .forgot-password:hover {
+    font-weight: bold;
+}
+.direct-adminlogin {
+    width: 200px;
+    height: 20px;
+    text-decoration: none;
+    color: #000;
+    position: absolute;
+    left: 160px;
+}
+.direct-adminlogin:hover, .direct-adminlogin:focus {
+    color: #000;
+    font-weight: bold;
+}
+.button-signin{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-signin{
+    width: 200px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #000;
+    font-size: 17px;
+    cursor: pointer;
+}
+.btn-signin:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    font-weight: bold;
+}
+.other-signin {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    line-height: 20px;
+}
+.other-sign-cap {
+    text-align: center;
+}
+.other-sign-icon {
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+.other-sign-icon a {
+    color: #000;
+}
+.message-alert {
+    width: 100%;
+    height: 167px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    color: red;
+    line-height: 30px;
+}
+.theme-btn-container {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+}
+.theme-btn {
+    cursor: pointer;
+    width: 20px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    top: 80px;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: animatetop;
+    animation-duration: .4s;
+}
+@keyframes animatetop {
+    form {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.modal-body {
+    padding: 2px 16px;
+    height: 250px;
+}
+.form-field-2{
+    margin-top: 50px;
+    margin-left: 230px;
+    position: relative;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #000;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+}
+.modal-footer-content {
+    font-weight: lighter;
+}
+.reset-account {
+    width: 100%;
+    height: 100%;
+}
+.input-reset-account{
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-reset-account{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.input-reset-account:not(:placeholder-shown) + .label-reset-account, 
+.input-reset-account:focus + .label-reset-account {
+    color: #000;
+    top: 0;
+    padding: 0 5px 0 5px;
+    display: inline-block;
+    background-color: #fff;
+}
+.btn-reset-account {
+    width: 700px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 30px 0 0 230px;
+    cursor: pointer;
+}

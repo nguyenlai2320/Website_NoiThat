@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
+:root {
+    --background: #fff;
+    --color: #000;
+}
+body {
+    font-family: Fira sans;
+}
+.container {
+    width: 1536px;
+    height: 745px;
+}
+.left-pane {
+    width: 768px;
+    height: 745px;
+    float: left;
+    background-image: url("../img/bg-signin.jpg");
+    background-size: cover;
+}
+.right-pane {
+    width: 768px;
+    height: 745px;
+    float: left;
+    background: var(--background);
+    color: var(--color);
+    position: relative;
+}
+.title {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.signup-form {
+    width: 100%;    
+    height: 680px;
+}
+.form-field {
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+}
+.input-user {
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-user {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.input-user:not(:placeholder-shown) + .label-user,
+.input-user:focus + .label-user {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+.input-name {
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-name {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.input-name:not(:placeholder-shown) + .label-name,
+.input-name:focus + .label-name {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+.input-pass {
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-pass {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.input-pass:not(:placeholder-shown) + .label-pass,
+.input-pass:focus + .label-pass {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.repeat-pass{
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+    font-size: 15px;
+}
+.label-repeat{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.repeat-pass:not(:placeholder-shown) + .label-repeat,
+.repeat-pass:focus + .label-repeat {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
+.option-signup {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.signin {
+    text-decoration: none;
+    position: absolute;
+    right: 50px;
+    color: #000;
+}
+.return-homepage{
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+.signin:hover, .return-homepage:hover {
+    font-weight: bold;
+}
+.button-signup {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-signup {
+    width: 200px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+.btn-signup:hover {
+    border: 2px solid #000;
+    background-color: #fff;
+    font-weight: bold;
+    color: #000;
+}
+.other-signin {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    line-height: 20px;
+}
+.other-sign-cap {
+    text-align: center;
+}
+.other-sign-icon {
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+.other-sign-icon a {
+    color: #000;
+}
+.message-alert {
+    width: 100%;
+    height: 167px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    color: red;
+    line-height: 30px;
+}
+.theme-btn-container {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+}
+.theme-btn {
+    cursor: pointer;
+    width: 20px;
+}
